@@ -156,7 +156,7 @@ export default [ {
       },
 
       style: {
-        lang: `scss`
+        lang: `css`
       }
     } ],
 
