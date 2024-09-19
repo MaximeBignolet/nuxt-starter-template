@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/namespace
+
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
 import _import from "eslint-plugin-import";
 import promise from "eslint-plugin-promise";
@@ -57,13 +57,17 @@ export default [ {
       window: `readonly`
     },
 
-    ecmaVersion: `latest`,
-    sourceType: `module`,
-
     parserOptions: {
+      ecmaVersion: `latest`,
+      sourceType: `module`,
       ecmaFeatures: {
         jsx: true
       }
+    }
+  },
+  settings: {
+    "import/parsers": {
+      espree: [ `.js`, `.cjs`, `.mjs`, `.jsx`, `.ts`, `.tsx` ]
     }
   },
 
